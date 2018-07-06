@@ -1,4 +1,5 @@
 #include <iostream>
+//升序排列
 void swap(int array[] , int i, int j)
 {
 	int temp = array[i-1];
@@ -13,18 +14,15 @@ void print_array(int array[], int n)
 }
 void insert_sort(int array[], int n)
 {
-	int *array_src = array;
 	for(int i = 0; i<n; i++)
 	{
 		if(i==0)
-		{
-			array_src[i] = array[0];
 			continue;
-		}
 		for(int j=0; j<i; j++)
 		{
-			if(array[i]<array_src[j])
-				continue;
+			int key = array[i];
+			if(key < array[j])
+				swap(array, i+1, j+1);
 		}
 	}
 }
@@ -33,5 +31,7 @@ int main()
 	int array[6] = {6,3,7,2,1,8};
 	print_array(array, 6);
 	swap(array, 1,3);
+	print_array(array, 6);
+	insert_sort(array, 6);
 	print_array(array, 6);
 }
