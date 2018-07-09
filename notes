@@ -36,6 +36,12 @@ Introduction to Algorithms
 寻找A的和最大的非空连续子数组。
 TIPS:数组的划分注意边界问题。接口越完善，扩展性越强。初始化一定要符合实际情况。
 
+4.2 矩阵乘法的Strassen算法
+https://www.cnblogs.com/zhoutaotao/p/3963048.html
+
+
+
+
 
 
 

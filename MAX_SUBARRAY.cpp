@@ -98,7 +98,7 @@ struct subarray find_max_subarray(int low, int high, int array[])
 
 int main()
 {
-	int array[16] = {13,-3,-25,20,-3,-16,-23,-18,-20,-7,12,-5,22,15,-4,7};
+	int array[16] = {13,-3,-25,20,-3,-16,-23,-18,-20,-7,m12,-5,22,15,-4,7};
 	print_array(array, 16);
 	subarray result = find_max_subarray(0, 15, array);
 	// int *low_array = getArray(0, 12, array);
