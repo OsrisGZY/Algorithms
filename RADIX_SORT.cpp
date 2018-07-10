@@ -1,11 +1,5 @@
 #include <iostream>
-//升序排列
-void swap(int array[] , int i, int j)
-{
-	int temp = array[i];
-	array[i] = array[j];
-	array[j] = temp;
-}
+
 void print_array(int array[], int n)
 {
 	for (int i =0; i<n; i++)
@@ -14,22 +8,25 @@ void print_array(int array[], int n)
 }
 void insert_sort(int array[], int n, int array_2[], int array_3[])
 {
-	for(int i = 0; i<n; i++)
+	for(int i = 1; i<n; i++)
 	{
-		if(i==0)
-			continue;
-		for(int j=0; j<i; j++)
+		int j = i-1;
+		int key = array[i];
+		int key_2 = array_2[i];
+		int key_3 = array_3[i];
+		while(j>=0 && array[j] > key)
 		{
-			int key = array[i];
-			if(key < array[j])
-			{
-				swap(array, i, j);
-				swap(array_2, i, j);
-				swap(array_3, i, j);
-			}
+			array[j+1] = array[j];
+			array_2[j+1] = array_2[j];
+			array_3[j+1] = array_3[j];
+			j = j - 1;
 		}
+		array[j+1] = key;
+		array_2[j+1] = key_2;
+		array_3[j+1] = key_3;
 	}
 }
+
 
 void radix_sort(int array[], int array_2[], int array_3[], int n)
 {
